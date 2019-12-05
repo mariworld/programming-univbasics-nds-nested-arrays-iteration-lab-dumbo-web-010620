@@ -34,19 +34,15 @@ def find_greater_pair(src)
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
 end
-
 def total_even_pairs(src)
   src
   total = 0
   num_index = 0
   while num_index < src.count do
     inner_index = 0
-    while inner_index < src[num_index].count do
-      if src[num_index][0] % 2 == 0 && src[num_index][1]
-        total += src[num_index][inner_index]
+      if src[num_index][0] % 2 == 0 && src[num_index][1] % 2 == 0
+        total += (src[num_index][0] + src[num_index][1])
       end
-      inner_index += 1
-    end
     num_index += 1
   end
   total
